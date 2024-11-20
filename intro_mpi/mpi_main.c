@@ -42,7 +42,9 @@ int main(int argc, char const * argv[])
     |             /         |        |          \          |
     |            /          |        |           \         |
     |         Rank 1      Rank 2   Rank 3      Rank 4      |
-	|_____________________________________________________*/
+    |                                                      |
+    |       (4 processors: from command line arguments)    |
+    |_____________________________________________________*/
 
 	MPI_Bcast(B, N_size * P_size, MPI_INT, 0, MPI_COMM_WORLD);
 	/*
@@ -92,5 +94,5 @@ int main(int argc, char const * argv[])
     }
     MPI_Finalize();
 
-	return 0;
+    return 0;
 }
